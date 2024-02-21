@@ -1,0 +1,31 @@
+.visual-block {
+  padding: 40px 0 33px;
+
+  @include media-mn(1023) {
+    padding: 118px 0 122px;
+  }
+
+  &__container {
+
+    @include media-mn(1023) {
+      display: flex;
+      gap: 97px;
+      align-items: flex-start;
+    }
+  }
+
+  &__text-box {
+    @include media-mn(1023) {
+      max-width: 557px;
+    }
+  }
+
+  &__img {
+    display: none;
+
+    @include media-mn(1023) {
+      display: block;
+      margin-top: 67px;
+    }
+  }
+}

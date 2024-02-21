@@ -1,0 +1,17 @@
+
+[class*='__container'] {
+  max-width: rem($maxWidthContainer);
+  margin: 0 auto;
+  padding: 0 rem($mainOffset);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.main {
+  flex: 1 1 auto;
+}

@@ -1,0 +1,19 @@
+@use 'sass:math';
+
+@import 'config/vars';
+
+@import 'config/functions';
+@import 'config/mixins';
+
+@import 'config/reset';
+
+@import 'config/base';
+
+@import 'config/common';
+
+@import 'components/header';
+@import 'components/popup';
+@import 'components/visual-block';
+@import 'components/team-block';
+@import 'components/partner-block';
+@import 'components/footer';

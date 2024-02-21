@@ -1,0 +1,38 @@
+$mainOffset: 30;
+$maxWidth: 1920;
+$minWidth: 320;
+$containerWidth: 1116;
+$maxWidthContainer: $containerWidth + ($mainOffset * 2);
+
+:root {
+  --bs-font-family: 'Roboto', sans-serif;
+  --bs-font-size: 18px;
+  --bs-font-weight: 400;
+  --bs-line-height: 1.6;
+  --bs-font-color: var(--darkest-gray-color);
+  --bs-transition: .5s ease;
+  --bs-radius: 10px;
+
+  --secondary-font-family: 'Space Grotesk', sans-serif;
+
+  --accent-color: var(--yellow-color);
+  --error-color: var(--red-color);
+  --focus-color: var(--blue-color);
+
+
+  --white-color: #FFF;
+  --black-color: #352E31;
+  --contrast-dark-color: #000;
+  --light-gray-color: #EAECEE;
+  --lightest-gray-color: #F7F9F9;
+  --silver-color: #C2CACF;
+  --dark-gray-color: #9DA4A7;
+  --darkest-gray-color: #535356;
+  --yellow-color: #F7BB33;
+  --red-color: #B33F27;
+  --blue-color: #0093C0;
+
+
+  --bs-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+
+}

@@ -1,0 +1,41 @@
+.partner-block {
+  background: var(--accent-color);
+  padding: 33px 0 57px;
+  font-size: 16px;
+  line-height: 1.5;
+
+  @include media-mn(1023) {
+    padding: 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    @include media-mn(1023) {
+      flex-direction: row;
+      align-items: center;
+      min-height: 240px;
+      gap: 48px;
+    }
+  }
+
+  &__img{
+    display: none;
+
+    @include media-mn(1023) {
+      display: block;
+      margin-left: 16px;
+    }
+  }
+
+  &__text {
+    color: var(--black-color);
+    margin: 0 0 48px;
+
+    @include media-mn(1023) {
+      margin-bottom: 32px;
+    }
+  }
+}
+

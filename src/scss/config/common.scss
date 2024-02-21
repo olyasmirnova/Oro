@@ -1,0 +1,226 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+.main-heading {
+  color: var(--black-color);
+  font: 500 35px/1.2 var(--secondary-font-family);
+  margin: 0 0 40px;
+
+  @include media-mn(1023) {
+    font-size: 60px;
+    letter-spacing: -2px;
+    text-shadow: 0 4px 4px rgba(0,0,0,0.25);
+    margin: 0 0 80px;
+  }
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    display: block;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    color: var(--black-color);
+
+    @include media-mn(1023) {
+      text-shadow: 0 4px 4px rgba(0,0,0,0.25);
+    }
+  }
+
+  &__field-holder {
+    margin-bottom: 32px;
+
+    @include media-mn(1023) {
+      margin-bottom: 56px;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: calc(100% + 3px);
+        left: 2px;
+        width: 100%;
+        box-shadow: 0 0 3px 1px rgba(0,0,0,0.25);
+      }
+    }
+  }
+
+  &__field {
+    border: solid var(--black-color);
+    border-width: 0 0 1px;
+    width: 100%;
+    height: 34px;
+    font-size: 16px;
+    line-height: 34px;
+    background: none;
+    padding: 0 10px;
+    color: var(--black-color);
+  }
+
+  &__btn-box {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    align-items: flex-start;
+
+    @include media-mn(1023) {
+      padding-right: 5px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__arrow-link {
+    @include media-mn(1023) {
+      margin-top: 3px;
+    }
+  }
+}
+
+.add-heading {
+  color: var(--black-color);
+  font: 500 45px/1.1 var(--secondary-font-family);
+  letter-spacing: -1px;
+  margin: 0 0 7px;
+
+  @include media-mn(1023) {
+    margin-bottom: 32px;
+  }
+}
+
+.btn {
+  background: var(--black-color);
+  color: var(--white-color);
+  text-transform: uppercase;
+  padding: 12px 30px;
+  font: 500 16px/1.2 var(--secondary-font-family);
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  height: 48px;
+  text-align: center;
+  position: relative;
+
+  @include media-mn(1023) {
+    padding-right: 85px;
+    padding-left: 85px;
+    height: 43px;
+    box-shadow: 0 3px 3px 1px rgba(0,0,0,0.25);
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    transition: width 0.2s 0.15s linear, height 0.15s linear, opacity 0s 0.35s;
+  }
+  &::before {
+    top: -6px;
+    right: -6px;
+    border-top: 2px solid var(--black-color);
+    border-left: 2px solid var(--black-color);
+  }
+  &::after {
+    bottom: -6px;
+    left: -6px;
+    border-bottom: 2px solid var(--black-color);
+    border-right: 2px solid var(--black-color);
+  }
+  &:hover {
+    text-decoration: none;
+
+    &::before,
+    &::after {
+      width: calc(50% + 8px);
+      height: 4px;
+      opacity: 1;
+      transition: width 0.2s linear, height 0.15s 0.2s linear, opacity 0s;
+    }
+  }
+
+  &.btn_large {
+    width: 100%;
+
+    @include media-mn(1023) {
+      width: auto;
+    }
+  }
+}
+
+.arrow-link {
+  position: relative;
+  font: 500 16px/1.2 var(--secondary-font-family);
+  text-transform: uppercase;
+  color: var(--black-color);
+  text-align: center;
+  transition: var(--bs-transition);
+  display: flex;
+  align-items: center;
+
+  @include media-mn(1023) {
+    text-shadow: 0 4px 4px rgba(0,0,0,0.25);
+  }
+
+  &:hover {
+    text-decoration: none;
+    transform: scale(1.1);
+  }
+
+  &::after {
+    content: '\21B5';
+    font-size: 20px;
+    padding: 5px 6px 0 0;
+    font-family: var(--bs-font-family);
+    transform: scale(-1.7, 1.2);
+    display: inline-flex;
+
+    .is-mobile &{
+      padding-top: 0;
+    }
+  }
+}
+
+.text {
+  margin: 0 0 30px;
+}
+
+.socials {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+
+  @include media-mn(1023) {
+    gap: 15px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border:  1px solid var(--lightest-gray-color);
+    color: var(--lightest-gray-color);
+    transition: var(--bs-transition);
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    svg {
+      height: 13px;
+      width: auto;
+      fill: var(--lightest-gray-color);
+    }
+  }
+}
