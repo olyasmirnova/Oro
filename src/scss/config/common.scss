@@ -8,7 +8,6 @@
   @include media-mn(1023) {
     font-size: 60px;
     letter-spacing: -2px;
-    text-shadow: 0 4px 4px rgba(0,0,0,0.25);
     margin: 0 0 80px;
   }
 }
@@ -23,28 +22,6 @@
     line-height: 1.5;
     margin-bottom: 8px;
     color: var(--black-color);
-
-    @include media-mn(1023) {
-      text-shadow: 0 4px 4px rgba(0,0,0,0.25);
-    }
-  }
-
-  &__field-holder {
-    margin-bottom: 32px;
-
-    @include media-mn(1023) {
-      margin-bottom: 56px;
-      position: relative;
-
-      &::after {
-        content: '';
-        position: absolute;
-        top: calc(100% + 3px);
-        left: 2px;
-        width: 100%;
-        box-shadow: 0 0 3px 1px rgba(0,0,0,0.25);
-      }
-    }
   }
 
   &__field {
@@ -56,7 +33,12 @@
     line-height: 34px;
     background: none;
     padding: 0 10px;
+    margin-bottom: 32px;
     color: var(--black-color);
+
+    @include media-mn(1023) {
+      margin-bottom: 56px;
+    }
   }
 
   &__btn-box {
@@ -109,7 +91,6 @@
     padding-right: 85px;
     padding-left: 85px;
     height: 43px;
-    box-shadow: 0 3px 3px 1px rgba(0,0,0,0.25);
   }
 
   &::before,
@@ -133,15 +114,17 @@
     border-bottom: 2px solid var(--black-color);
     border-right: 2px solid var(--black-color);
   }
-  &:hover {
-    text-decoration: none;
+  .desktop & {
+    &:hover {
+      text-decoration: none;
 
-    &::before,
-    &::after {
-      width: calc(50% + 8px);
-      height: 4px;
-      opacity: 1;
-      transition: width 0.2s linear, height 0.15s 0.2s linear, opacity 0s;
+      &::before,
+      &::after {
+        width: calc(50% + 8px);
+        height: 4px;
+        opacity: 1;
+        transition: width 0.2s linear, height 0.15s 0.2s linear, opacity 0s;
+      }
     }
   }
 
@@ -164,13 +147,11 @@
   display: flex;
   align-items: center;
 
-  @include media-mn(1023) {
-    text-shadow: 0 4px 4px rgba(0,0,0,0.25);
-  }
-
-  &:hover {
-    text-decoration: none;
-    transform: scale(1.1);
+  .desktop & {
+    &:hover {
+      text-decoration: none;
+      transform: scale(1.1);
+    }
   }
 
   &::after {
@@ -213,8 +194,10 @@
     color: var(--lightest-gray-color);
     transition: var(--bs-transition);
 
-    &:hover {
-      opacity: 0.6;
+    .desktop & {
+      &:hover {
+        opacity: 0.6;
+      }
     }
 
     svg {

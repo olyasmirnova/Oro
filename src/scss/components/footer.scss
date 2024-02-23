@@ -54,8 +54,10 @@
     color: var(--dark-gray-color);
     text-decoration: none;
 
-    &:hover {
-      text-decoration: underline;
+    .desktop & {
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
   &__copy {

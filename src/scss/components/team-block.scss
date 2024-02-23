@@ -108,9 +108,11 @@
     text-decoration: underline;
     transition: var(--bs-transition);
 
-    &:hover {
-      text-decoration: none;
-      color: var(--dark-gray-color);
+    .desktop & {
+      &:hover {
+        text-decoration: none;
+        color: var(--dark-gray-color);
+      }
     }
   }
 }

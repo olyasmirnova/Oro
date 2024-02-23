@@ -171,10 +171,12 @@
       }
     }
     .active &,
-    &:hover {
-      text-decoration: none;
-      &::after {
-        width: 100%;
+    .desktop & {
+      &:hover {
+        text-decoration: none;
+        &::after {
+          width: 100%;
+        }
       }
     }
   }
@@ -197,6 +199,13 @@
     gap: 9px;
     align-items: center;
     word-spacing: 1px;
+    transition: var(--bs-transition);
+
+    .desktop & {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
 
     &_profile {
       margin-top: -3px;
@@ -238,29 +247,32 @@
         transition: var(--bs-transition);
       }
 
-      &:hover {
-
-        &::before {
-          top: 4px;
-          transform: rotate(135deg);
-        }
-      }
-    }
-
-    &:hover {
-      .auth-box__btn {
-        @include media-mn(1023) {
+      .desktop & {
+        &:hover {
           &::before {
             top: 4px;
             transform: rotate(135deg);
           }
         }
       }
-      .auth-box__drop {
-        display: none;
+    }
 
-        @include media-mn(1023) {
-          display: block;
+    .desktop & {
+      &:hover {
+        .auth-box__btn {
+          @include media-mn(1023) {
+            &::before {
+              top: 4px;
+              transform: rotate(135deg);
+            }
+          }
+        }
+        .auth-box__drop {
+          display: none;
+
+          @include media-mn(1023) {
+            display: block;
+          }
         }
       }
     }

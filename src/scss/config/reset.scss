@@ -39,6 +39,14 @@ textarea {
   font-family: inherit;
 }
 
+input,
+button,
+a {
+  &:focus {
+    outline: 2px solid var(--accent-color);
+  }
+}
+
 input::-ms-clear {
   display: none;
 }
@@ -55,6 +63,7 @@ input[type="number"] {
 button {
   cursor: pointer;
   user-select: none;
+  -webkit-appearance: button;
 
   &::-moz-focus-inner {
     padding: 0;
@@ -76,8 +85,10 @@ a {
     text-decoration: none;
   }
 
-  &:hover {
-    text-decoration: underline;
+  .desktop & {
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
